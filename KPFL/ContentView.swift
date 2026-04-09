@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var store = DataStore()
+    @StateObject private var settings = AppSettings()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        AppRoot()
+            .environmentObject(store)
+            .environmentObject(settings)
+            .preferredColorScheme(settings.colorScheme)
+            .statusBarHidden(true)
     }
 }
 

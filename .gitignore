@@ -1,0 +1,14 @@
+# Xcode user/build artifacts
+.DS_Store
+.DerivedData/
+build/
+DerivedData/
+
+# Xcode workspace user settings
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcshareddata/
+
+# SwiftPM
+.build/
